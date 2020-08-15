@@ -9,8 +9,8 @@ const KEY = "AIzaSyBhIXVcXyRadqS-32MCeZ7AYCgfiXAy1RI";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
-  componentDidMount(){
-    this.onTermSubmit('tonight alive')
+  componentDidMount() {
+    this.onTermSubmit("tonight alive");
   }
 
   onTermSubmit = async (term) => {
@@ -23,9 +23,9 @@ class App extends React.Component {
         key: KEY,
       },
     });
-    this.setState({ 
+    this.setState({
       videos: response.data.items,
-      selectedVideo: response.data.items[0]
+      selectedVideo: response.data.items[0],
     });
   };
 
